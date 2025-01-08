@@ -1,0 +1,138 @@
+.topheader {
+	box-shadow: 0 4px 5px var(--navbar-shallow-color);
+	position: fixed;
+	background-color: var(--theme-color);
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.topnav {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+/**Menu**/
+.menu {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+  /*z-index: 0;*/
+}
+
+.menu li {
+	padding: 0 15px;
+}
+
+.menu a {
+	color: var(--text-color);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 50px;
+	position: relative;
+}
+
+.menu a::after {
+  content: "";
+  background-color: var(--secundary-color);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.menu a.selected::after,
+.menu a:hover::after {
+  opacity: 0.8;
+}
+
+.menu a:hover {
+ /* color: var(--secundary-color);*/
+}
+
+.open-menu,
+.close-menu {
+	display: none;
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--secundary-color);
+	padding: 10px;
+}
+
+@media (max-width: 980px) {
+	.menu {
+		flex-direction: column;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		align-item: center;
+		background-color: var(--menu-mobile-background-color);
+		overflow-y: auto;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s;
+	}
+
+	.menu li {
+		padding: 0;
+	}
+
+	.menu a {
+		color: var(--text-color-inverse);
+		line-height: 60px;
+		font-size: 25px;
+	}
+
+	.open-menu,
+	.close-menu {
+		display: block;
+		/*background-color: var(--secundary-color);*/
+		background: none;
+		cursor: pointer;
+		border: none;
+		font-size: 22px;
+	}
+
+	.close-menu {
+		align-self: flex-end;
+		padding-right: 12px;
+		padding-left: 12px;
+		margin-top: 10px;
+		margin-right: 12px;
+	}
+
+	.menu_opened {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	.open-menu:focus:not(:focus-visible),
+	.close-menu: focus:not(:focus-visible) {
+		outline: none;
+	}
+
+  .menu a::after {
+    content: none;
+  }
+
+  .menu a:hover,
+  .menu a.selected {
+    color: var(--secundary-color);
+  }
+}
