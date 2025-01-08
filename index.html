@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Servicio Deptartamental de Industria y Comercio</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"/>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-45GX5GVNNQ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-45GX5GVNNQ');
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	<script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+	<script defer src="js/app.js"></script>
+</head>
+
+<body>
+	<header class="topheader">
+		<nav class="topnav">
+			<a href="https://www.santacruz.gob.bo" class="logo">
+				<img src="img/logo-gad.png" alt="GAD"/>
+			</a>
+			<button class="open-menu" aria-label="Abrir menú">
+				<i class="fas fa-bars" alt="abrir menú"></i>
+			</button>
+			<ul class="menu">
+				<button class="close-menu" aria-label="Cerrar menú">
+					<i class="fa fa-close" aria-hidden="true" alt="cerrar menú"></i>
+				</button>
+				<li><a href="#inicio" class="selected">Inicio</a></li>
+				<li><a href="#tramites">Requisitos de trámites</a></li>
+				<li><a href="guias.html" target="_blank">Guías</a></li>
+				<li><a href="#normativa">Normativa</a></li>
+				<li><a href="red-geodesica-pi.html" target="_blank">Red Geodésica</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<section class="hero-section" id="inicio">
+			<div class="hero-section-img">
+				<img class="hero-img" src="img/bgpi.jpg" alt="Parque Industrial R.D.G.">
+				<div class="hero-section-title">Parque Industrial</div>
+				<div class="hero-section-title2">Ramón Darío Gutiérrez</div>
+				<div class="hero-section-bajada">#SEHACEGESTIONTRABAJANDO</div>
+			</div>
+		</section>
+		<!-- End hero section -->
+
+		<section class="antecedent-section">
+			<h1>Antecedentes</h1>
+			<p class="paragraph">El Comité de Obras Públicas de Santa Cruz a partir del año 1960 inicia los estudios y las gestiones para establecer el Plan Director de la ciudad de Santa Cruz de la Sierra, que con un enfoque integral, incorpora el componente industrial como la base del desarrollo económico y social del departamento y el país.</p>
+			<p class="paragraph">Mediante Decreto Supremo N° 08845 de fecha 9 de julio de 1969, el Gobierno Central, declara de necesidad y utilidad pública la expropiación de los terrenos comprendidos dentro del perímetro determinado por las picadas donde están colocados los bulones de la poligonal trazada por el Instituto Geográfico Militar a favor del Comité de Obras Públicas de Santa Cruz, para la instalación de una Zona Industrial en la ciudad de Santa Cruz de la Sierra, terrenos ubicados fuera del cuarto anillo de circunvalación y al noreste de esta ciudad, encerrando una superficie de 962 hectáreas, 75 áreas y 34 centiáreas. Asimismo, determina en su artículo 4to. que los terrenos a expropiarse serán destinados por el Consejo del Plan Regulador de Santa Cruz, como área de la nueva zona industrial de Santa Cruz de la Sierra.</p>
+			<p class="paragraph">Posteriormente y mediante Decreto Supremo N° 14057 de fecha 25 octubre 1976, el Gobierno Central autoriza al Comité de Obras Públicas de Santa Cruz, transferir o arrendar terrenos de su propiedad ubicados en el Parque Industrial Ramón Darío Gutiérrez a personas naturales o jurídicas, para fines de instalación industrial. Asimismo, mediante Resolución Suprema N° 183574 de fecha 22 de abril de 1977 se reglamenta la venta de dichos predios, creando así el Parque Industrial Ramón Darío Gutiérrez.</p>
+			<p class="paragraph">Mediante Ley Nacional N° 1839 del 06 de Abril de 1998 se elevan a rango de Ley Nacional el Decreto Supremo y la Resolución Suprema que dan inicio al Parque Industrial Ramón Darío Gutiérrez.</p>
+			<p class="paragraph">Actualmente el Parque Industrial alberga más de 600 empresas de diversos rubros y servicios y su administración está a cargo del Servicio Deptartamental de Industria y Comercio del Gobierno Autónomo Departamental de Santa Cruz contando con los siguientes servicios:</p>
+		</section>
+		<!-- End antecedent section-->
+
+		<section class="tramites" id="tramites">
+			<h1>Trámites y requisitos</h1>
+			<div class="article">
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de hipoteca de terreno</h2>
+						<h3>Costo: 500 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/hipoteca.html" title="Autorización de hipoteca de terreno">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de hipoteca de terreno (Peque&ntilde;a industria)</h2>
+						<h3>Costo: 300 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/hipoteca.html" title="Autorización de hipoteca de terreno (Peque&ntilde;a industria)">Ver requisitos</button>
+					</div>
+				</div>
+
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de venta de terreno a terceros</h2>
+						<h3>Costo: 300 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/transferencia.html" title="Autorización de transferencia de terreno a terceros">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de arrendamiento de terreno</h2>
+						<h3>Costo: 200 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/arrendamiento.html" title="Autorización de arrendamiento de terreno">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Estado de carpeta</h2>
+						<h3>Costo: 100 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/estado-carpeta.html" title="Estado de carpeta">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de cambio de razón social</h2>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/razon-social.html" title="Autorización de cambio de razón social">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Actualización de plano de ubicación</h2>
+						<h3>Costo: 100 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/plano-ubicacion.html" title="Aprobación de plano de ubicación por actualización">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Aprobación de plano de ubicación por transferencia de terreno a terceros</h2>
+						<h3>Costo: 100 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/plano-ubicacion-post-transferencia.html" title="Aprobación de plano de ubicación por transferencia de terreno a terceros">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Aprobación de plano de ubicación por emisión de minutas</h2>
+						<h3>Costo: 100 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/plano-ubicacion-post-minuta.html" title="Aprobación de plano de ubicación por emisión de minutas">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de fusión de terrenos</h2>
+						<h3>Costo: 200 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/fusion.html" title="Autorización de fusión de terreno">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de subdivisión de terreno</h2>
+						<h3>Costo: 200 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/subdivision.html" title="Autorización de subdivisión de terreno">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de instalación de servicios básicos: energía eléctrica, agua</h2>
+						<h3>Costo: 100 Bs. por servicio</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/servicios.html" title="Autorización de instalación de servicios básicos: energía eléctrica, agua">Ver requisitos</button>
+					</div>
+				</div>
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de instalación de gas</h2>
+						<h3>Costo: 100 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/instalacion-gas.html" title="Autorización de instalación de gas">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Autorización de instalación o aumento de potencia de transformador</h2>						
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/autorizacion-transformador.html" title="Autorización de instalación o aumento de potencia de transformador">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Revisión de anteproyectos de obras civiles</h2>						
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/anteproyectos-civiles.html" title="Revisión de anteproyectos de obras civiles">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Visado de obras civiles</h2>
+						<h3>Costo: 100 Bs. por proyecto</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/obras-civiles.html" title="Visado de obras civiles">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Visado de proyecto de factibilidad industrial</h2>						
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/proyecto-factibilidad.html" title="Visado de proyecto de factibilidad industrial">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Visado de plan de contingencia</h2>						
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/plan-contingencia.html" title="Visado de plan de contingencia">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Certificado de asentamiento</h2>
+						<h3>Costo: 100 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/certificado-asentamiento.html" title="Certificado de asentamiento">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Certificado de trámite en curso</h2>						
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/certificado-tramite.html" title="Certificado de trámite en curso">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Certificado de visado de obras civiles</h2>						
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/certificado-obras-civiles.html" title="Certificado de visado de obras civiles">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Certificado de aprobación de planos de ubicación</h2>						
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/certificado-planos-ubicacion.html" title="Certificado de aprobación de planos de ubicación">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Certificado de aprobación de proyecto de factibilidad industrial</h2>						
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/certificado-proyecto-factibilidad.html" title="Certificado de aprobación de proyecto de factibilidad industrial">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Certificado de levantamiento de gravámenes</h2>						
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/certificado-gravamenes.html" title="Certificado de levantamiento de gravámenes">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Minuta de transferencia por perfeccionamiento de derecho propietario y ratificación de venta </h2>
+						<h3>Costo: 400 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/minuta-transferencia.html" title="Minuta de transferencia por perfeccionamiento de derecho propietario y ratificación de venta">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Minuta de transferencia por perfeccionamiento de derecho propietario y ratificación de venta (Peque&ntilde;a industria) </h2>
+						<h3>Costo: 250 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/minuta-transferencia.html" title="Minuta de transferencia por perfeccionamiento de derecho propietario y ratificación de venta (Peque&ntilde;a industria)">Ver requisitos</button>
+					</div>
+				</div>
+
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Minuta aclarativa por excedente de terreno</h2>
+						<h3>Costo: 200 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/minuta-aclarativa.html" title="Minuta aclarativa por excedente de terreno">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Minuta de cesión de derechos</h2>
+						<h3>Costo: 600 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/minuta-cesion.html" title="Minuta de cesión de derechos">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Minuta de cancelación de gravámen hipotecario</h2>
+						<h3>Costo: 100 Bs.</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/minuta-gravamen.html" title="Minuta de cancelación de gravámen hipotecario">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="article-tr">
+					<div class="article-icon"><i class="fas fa-file-alt"></i></div>
+					<div class="article-desc">
+						<h2>Fotocopias de documentación</h2>
+						<h3>Costo: de acuerdo a la cantidad de hojas</h3>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#requisitosModal" data-bs-whatever="includes/fotocopias.html" title="Fotocopias de documentación">Ver requisitos</button>
+					</div>
+				</div>
+
+				<div class="modal fade" id="requisitosModal" tabindex="-1" aria-labelledby="requisitosModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title col-11 text-center" id="requisitosModalLabel"></h5>
+				        <button type="button" class="btn-close btn-secondary" data-bs-dismiss="modal" aria-label="Close"></button>
+				      </div>
+				      <div class="modal-body">
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				<!-- Modal -->
+			</div>
+			<!-- End article-->
+		</section>
+		<!-- End tramites section-->
+
+		<section class="normative-section" id="normativa">
+			<h1>Normativa</h1>
+			<div class="normative">
+				<ul>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\DECRETO-08845.pdf" target="_blank" rel="noopener noreferrer">Decreto Supremo Nº 08845</a></li>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\DECRETO-14057.pdf" target="_blank" rel="noopener noreferrer">Decreto Supremo Nº 14057</a></li>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\RESOLUCION-183574.pdf" target="_blank" rel="noopener noreferrer">Resolución Suprema Nº 183574</a></li>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\LEY-1839.pdf" target="_blank" rel="noopener noreferrer">Ley Nacional Nº 1839</a></li>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\LEY-2249.pdf" target="_blank" rel="noopener noreferrer">Ley Nacional Nº 2249</a></li>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\LEY-2544.pdf" target="_blank" rel="noopener noreferrer">Ley Departamental Nº 2544</a></li>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\LEY-95.pdf" target="_blank" rel="noopener noreferrer">Ley Departamental Nº 95</a></li>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\LEY-112.pdf" target="_blank" rel="noopener noreferrer">Ley Departamental Nº 112</a></li>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\DECRETO-212.pdf" target="_blank" rel="noopener noreferrer">Decreto Departamental Nº 212</a></li>
+				  <li><i class="fas fa-file-pdf normative-icon"></i><a href="files\DECRETO-266.pdf" target="_blank" rel="noopener noreferrer">Decreto Departamental Nº 266</a></li>
+				</ul>
+			</div>
+		</section>
+		<!-- End normative section-->
+
+		<section class="contact-section" id="contacto">
+			<h1>Contacto</h1>
+			<p>Servicio Deptartamental de Industria y Comercio<br>Gobierno Autónomo Departamental de Santa Cruz</p>
+			<div class="contact-wrapper">
+				<div class="contact-map" id="map"></div>
+				<div class="contact-info">
+					<h4>Más información</h4>
+					<ul>
+						<li><i class="fas fa-map-marker-alt contact-icon"></i>Entre Calle Diagonal 6 y Transversal 5, 4to. Anillo Zona Parque Industrial</li>
+						<li><i class="fas fa-phone contact-icon"></i>+591-3-3460163</li>
+						<li><i class="fas fa-envelope-open-text contact-icon"></i>parqueindustrial@santacruz.gob.bo</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- End contact section-->
+	</div>
+	<!-- End container -->
+
+	<footer class="footer">
+		Servicio Deptartamental de Industria y Comercio | Copyright @ 2023
+	</footer>
+
+	<script type="text/javascript">
+		var mapsipe = L.map('map').
+		setView([-17.774378, -63.133087], 16);
+		L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					    attribution: '',
+					    maxZoom: 20
+		}).addTo(mapsipe);
+		var marker = L.marker([-17.764931, -63.145517]).addTo(mapsipe);
+		marker.bindPopup("<b>Dirección de Industria y Comercio</b>").openPopup();
+	</script>
+
+	<script type="text/javascript">
+		var requisitosModal = document.getElementById('requisitosModal')
+		requisitosModal.addEventListener('show.bs.modal', function (event) {
+		  var button = event.relatedTarget
+		  var recipient = button.getAttribute('data-bs-whatever')
+		  var title = button.getAttribute('title')
+		  var modalTitle = requisitosModal.querySelector('.modal-title')
+		  modalTitle.textContent = title
+
+		  $(".modal-body").load(recipient);
+		  var modalBody = requisitosModal.querySelector('.modal-body')
+		})
+	</script>
+
+	<script type="text/javascript">
+		$( document ).ready(function() {
+		    $('#popup').modal('toggle')
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Servicio Deptartamental de Industria y Comercio</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"/>
+  	<link rel="stylesheet" href="css/leaflet.extra-markers.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-45GX5GVNNQ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-45GX5GVNNQ');
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	<script src="js/leaflet.extra-markers.min.js"></script>
+	<script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+	<script defer src="js/app.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<section class="geodesic-section" id="red-geodesica">
+			<h1>Red Geodésica del Parque Industrial Ramón Darío Gutiérrez 2023</h1>
+			<table class="table table-sm">
+			  <thead>
+			    <tr>
+			      <th scope="col">#</th>
+			      <th scope="col">VÉRTICE</th>
+			      <th scope="col">X-ESTE</th>
+			      <th scope="col">Y-NORTE</th>
+			      <th scope="col">Z-COTA</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <th scope="row">1</th>
+			      <td>RG111</td>
+			      <td>483630.638</td>
+			      <td>8036742.02</td>
+			      <td>434.755</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">2</th>
+			      <td>RG211</td>
+			      <td>483906.753</td>
+			      <td>8037148.659</td>
+			      <td>432.097</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">3</th>
+			      <td>RG112</td>
+			      <td>484395.949</td>
+			      <td>8034647.241</td>
+			      <td>434.839</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">4</th>
+			      <td>RG212</td>
+			      <td>484552.912</td>
+			      <td>8034646.771</td>
+			      <td>433.641</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">5</th>
+			      <td>RG123</td>
+			      <td>486332.382</td>
+			      <td>8037277.246</td>
+			      <td>426.307</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">6</th>
+			      <td>RG223</td>
+			      <td>486628.535</td>
+			      <td>8037494.825</td>
+			      <td>424.455</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">7</th>
+			      <td>RG124</td>
+			      <td>486958.378</td>
+			      <td>8035185.792</td>
+			      <td>426.877</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">8</th>
+			      <td>RG224</td>
+			      <td>487080.523</td>
+			      <td>8034962.689</td>
+			      <td>426.796</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">9</th>
+			      <td>PI01</td>
+			      <td>485893.275</td>
+			      <td>8034771.128</td>
+			      <td>423.437</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">10</th>
+			      <td>PI02</td>
+			      <td>486213.122</td>
+			      <td>8034914.795</td>
+			      <td>422.826</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">11</th>
+			      <td>PI03</td>
+			      <td>484878.623</td>
+			      <td>8035180.116</td>
+			      <td>423.511</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">12</th>
+			      <td>PI04</td>
+			      <td>485262.917</td>
+			      <td>8035256.95</td>
+			      <td>423.117</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">13</th>
+			      <td>PI05</td>
+			      <td>484350.082</td>
+			      <td>8035956.803</td>
+			      <td>425.406</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">14</th>
+			      <td>PI06</td>
+			      <td>484067.827</td>
+			      <td>8036131.498</td>
+			      <td>425.239</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">15</th>
+			      <td>PI07</td>
+			      <td>485247.774</td>
+			      <td>8036371.306</td>
+			      <td>421.662</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">16</th>
+			      <td>PI08</td>
+			      <td>485575.929</td>
+			      <td>8036186.677</td>
+			      <td>422.173</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">17</th>
+			      <td>PI09</td>
+			      <td>484814.287</td>
+			      <td>8037390.196</td>
+			      <td>421.208</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">18</th>
+			      <td>PI10</td>
+			      <td>484573.029</td>
+			      <td>8037572.472</td>
+			      <td>420.953</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">19</th>
+			      <td>PI11</td>
+			      <td>485899.783</td>
+			      <td>8038276.998</td>
+			      <td>414.946</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">20</th>
+			      <td>PI12</td>
+			      <td>485506.116</td>
+			      <td>8038514.762</td>
+			      <td>416.822</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">21</th>
+			      <td>PI13</td>
+			      <td>485498.412</td>
+			      <td>8038939.631</td>
+			      <td>415.747</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">22</th>
+			      <td>PI14</td>
+			      <td>485659.044</td>
+			      <td>8038820.361</td>
+			      <td>414.837</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">23</th>
+			      <td>PI15</td>
+			      <td>483474.625</td>
+			      <td>8037890.793</td>
+			      <td>421.862</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">24</th>
+			      <td>PI16</td>
+			      <td>483337.736</td>
+			      <td>8037944.966</td>
+			      <td>422.223</td>
+			    </tr>
+			  </tbody>
+			</table>
+			<p class="paragraph">Datos presentados en Sistema UTM - WGS84</p>
+			<h2>Mapa de puntos geodésicos. Haga clic en cada uno de los marcadores <img src="img/marker.png"></h2>
+			<div class="geodesic-map" id="map"></div>
+		</section>
+		<!-- End geodesic section-->
+	</div>
+	<!-- End container -->
+
+	<footer class="footer">
+		Servicio Deptartamental de Industria y Comercio | Copyright @ 2023
+	</footer>
+
+	<script type="text/javascript">
+		var mapsipe = L.map('map').
+		setView([-17.76208194505363, -63.1391743048759], 15);
+
+        L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3']
+        }).addTo(mapsipe);
+
+		var redMarker = L.ExtraMarkers.icon({
+		    icon: 'fa-circle',
+		    markerColor: 'green-dark',
+		    shape: 'circle',
+		    prefix: 'fa',
+		  });
+
+		var marker = L.marker([-17.756547795979994, -63.15442370331947], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>RG111: 483630,638 - 8036742,02</b>").openPopup();
+
+		var marker = L.marker([-17.752880062244934, -63.151817014833355], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>RG211: 483906,753 - 8037148,659</b>").openPopup();
+
+		var marker = L.marker([-17.775489688399414, -63.14722271432307], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>RG112: 484395,949 - 8034647,241</b>").openPopup();
+
+		var marker = L.marker([-17.775499834820373, -63.145741535420754], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>RG212: 484552,912 - 8034646,771</b>").openPopup();
+
+		var marker = L.marker([-17.751730432281832, -63.12893141947992], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>RG123: 486332,382 - 8037277,246</b>").openPopup();
+
+		var marker = L.marker([-17.749770817914413, -63.12613785711596], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>RG223: 486628,535 - 8037494,825</b>").openPopup();
+
+		var marker = L.marker([-17.770643478850598, -63.12303924515323], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>RG124: 486958,378 - 8035185,792</b>").openPopup();
+
+		var marker = L.marker([-17.772659857483454, -63.12188965560768], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>RG224: 487080,523 - 8034962,689</b>").openPopup();
+
+		var marker = L.marker([-17.77437898596012, -63.1330892883415], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI01: 485893,275 - 8034771,128</b>").openPopup();
+
+		var marker = L.marker([-17.773088461584816, -63.13006939186569], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI02: 486213,122 - 8034914,795</b>").openPopup();
+
+		var marker = L.marker([-17.770675368050583, -63.14266212173028], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI03: 484878,623 - 8035180,116</b>").openPopup();
+
+		var marker = L.marker([-17.769991021504065, -63.13903891281555], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI04: 485262,917 - 8035256,95</b>").openPopup();
+
+		var marker = L.marker([-17.76365754946101, -63.14763754644173], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI05: 484350,082 - 8035956,803</b>").openPopup();
+
+		var marker = L.marker([-17.762073725390582, -63.15030595818058], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI06: 484067,827 - 8036131,498</b>").openPopup();
+
+		var marker = L.marker([-17.759909864111876, -63.13916532361512], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI07: 485247,774 - 8036371.306</b>").openPopup();
+
+		var marker = L.marker([-17.761586981650176, -63.13607970563364], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI08: 485575,929 - 8036186,677</b>").openPopup();
+
+		var marker = L.marker([-17.750697336875817, -63.14324729168108], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI09: 484814,287 - 8037390,196</b>").openPopup();
+
+		var marker = L.marker([-17.749052363627538, -63.14552202604535], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI10: 484573,029 - 8037572,472</b>").openPopup();
+
+		var marker = L.marker([-17.742697893991643, -63.133009269421855], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI11: 485899,783 - 8038276,998</b>").openPopup();
+
+		var marker = L.marker([-17.740544098889497, -63.13671464619154], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI12: 485506,116 - 8038514,762</b>").openPopup();
+
+		var marker = L.marker([-17.736702532565676, -63.13678719010977], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI13: 485498,412 - 88038939,631</b>").openPopup();
+
+		var marker = L.marker([-17.737775946425828, -63.13526898304604], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI14: 485659,044 -8038820,361</b>").openPopup();
+
+		var marker = L.marker([-17.746162884149882, -63.15588041481431], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI15:483474,625 - 8037890,793</b>").openPopup();
+
+		var marker = L.marker([-17.74567219272903, -63.157171229398905], {icon: redMarker}).addTo(mapsipe);
+		marker.bindPopup("<b>PI16: 483337,736 - 8037944,966</b>").openPopup();
+	</script>
+
+</body>
+</html>
